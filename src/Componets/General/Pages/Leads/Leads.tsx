@@ -9,7 +9,7 @@ export default function Leads() {
     const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM0NjQwMTExLCJpYXQiOjE3MzM0MzA1MTEsImp0aSI6IjIwOTFkZjZlODIyMDQ3Yzc4ZmFhNjRhNmU5MGYxNzc5IiwidXNlcl9pZCI6Mn0.a41RPwo2uvDuQNQYlqfUZ1iJrdApcoxGEXmlFKrucbk"
     useEffect(()=>{
       const get = async () => {
-        await leadsApi.get('/properties/', {
+        await leadsApi.get('/leads/', {
           headers: {
             'Authorization': `Bearer ${token}`
           }
