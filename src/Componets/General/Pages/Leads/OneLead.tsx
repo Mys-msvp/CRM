@@ -4,6 +4,8 @@ import { useParams } from 'react-router'
 import Header from '../../Header'
 import HomeData from './HomeData'
 import OwnerData from './OwnerData'
+import MSVData from './MSVData'
+import Map from './Map'
 
 export default function OneLead() {
     const params = useParams()
@@ -35,8 +37,11 @@ export default function OneLead() {
         <div className='flex flex-row gap-2  justify-between'>
           <OwnerData value={data}/>
           <HomeData value={data}/>
-           
           </div>
+        <div className='flex flex-row gap-2 justify-between'>
+          <MSVData value={data}/>
+          <Map/>
+        </div>
         
     </div>
   )
