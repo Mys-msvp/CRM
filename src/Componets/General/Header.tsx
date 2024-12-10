@@ -2,7 +2,12 @@ import { Button } from '@/components/ui/button'
 import React from 'react'
 import BackButton from './BackButton'
 
-export default function Header({name,withBackButton=true}) {
+interface HeaderProps {
+    name: string
+    withBackButton?: boolean
+} 
+
+export default function Header({name,withBackButton=true}: HeaderProps) {
   if (!withBackButton) return (
     <div className='align-middle text-center text-2xl '>
         {name}
@@ -10,7 +15,7 @@ export default function Header({name,withBackButton=true}) {
   )
   return (
     <div className='align-middle text-center text-2xl flex flex-row'>
-        <div className='basis-1/6'>
+        <div className='basis-1/6 justify-start flex flex-row '>
             <BackButton/>
         </div>
         
